@@ -35,8 +35,8 @@ export default function About() {
             className="space-y-5 text-zinc-400 text-lg leading-relaxed"
           >
             <p>
-              Hey! I'm <span className="text-white font-semibold">Yiqi Xue</span>, an AI engineer
-              and full-stack developer based in the Bay Area. I studied Math at{' '}
+              Hey! I'm <span className="text-white font-semibold">Yiqi Xue</span>, a Full-Stack AI
+              Engineer / Machine Learning Systems Engineer based in the Bay Area. I studied Math at{' '}
               <span className="text-violet-400">UCLA</span> before earning my degree in Computer
               Science from <span className="text-violet-400">USC</span>.
             </p>
