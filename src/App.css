@@ -10,7 +10,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #0a0a0f;
+  background: #04060b;
 }
 
 .font-mono {
@@ -19,7 +19,7 @@ body {
 
 /* Glowing cursor effect */
 .glow-text {
-  text-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  text-shadow: 0 0 20px rgba(251, 191, 36, 0.45);
 }
 
 /* Custom scrollbar */
@@ -27,19 +27,19 @@ body {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0a0f;
+  background: #04060b;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3b1f6e;
+  background: #1e5f66;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+  background: #22d3ee;
 }
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, #a78bfa, #60a5fa, #34d399);
+  background: linear-gradient(120deg, #fcd34d, #fb923c, #22d3ee);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -56,12 +56,86 @@ body {
   opacity: 0.03;
 }
 
-/* Grid background */
+/* Console grid background */
 .grid-bg {
-  background-image: 
-    linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
   background-size: 50px 50px;
+}
+
+/* Cinematic edge vignette */
+.vignette::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  background: radial-gradient(ellipse at center, transparent 45%, rgba(2, 4, 10, 0.55) 100%);
+}
+
+/* HUD panel: thin cyan border + corner brackets */
+.hud-panel {
+  position: relative;
+}
+.hud-panel::before,
+.hud-panel::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+.hud-panel::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid #fbbf24;
+  border-left: 2px solid #fbbf24;
+}
+.hud-panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid #22d3ee;
+  border-right: 2px solid #22d3ee;
+}
+.hud-panel:hover::before,
+.hud-panel:hover::after {
+  opacity: 1;
+}
+
+/* Small mono HUD label */
+.hud-label {
+  font-family: 'JetBrains Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+}
+
+/* Angular sci-fi button */
+.btn-sci {
+  clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px);
+}
+
+/* Scanline sweep, used inside hud-panel media frames */
+.scanline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.scanline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent, rgba(34, 211, 238, 0.08), transparent);
+  animation: scan-sweep 5s linear infinite;
+}
+@keyframes scan-sweep {
+  0% { top: -40%; }
+  100% { top: 100%; }
 }
 
 /* Skill badge hover */
@@ -70,7 +144,7 @@ body {
 }
 .skill-badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.25);
 }
 
 /* Section fade animation */

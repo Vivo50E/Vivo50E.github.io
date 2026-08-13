@@ -6,13 +6,13 @@ const skillCategories = [
   {
     name: 'AI / ML',
     icon: '🤖',
-    color: 'violet',
+    color: 'amber',
     skills: ['Python', 'PyTorch', 'vLLM', 'LLM Inference', 'Model Serving', 'Matplotlib', 'LaTeX'],
   },
   {
     name: 'Backend',
     icon: '⚙️',
-    color: 'blue',
+    color: 'cyan',
     skills: ['C', 'Python', 'Node.js', 'Kafka', 'Redis', 'MongoDB', 'NGINX', 'Jinja'],
   },
   {
@@ -30,25 +30,25 @@ const skillCategories = [
   {
     name: 'Creative',
     icon: '✨',
-    color: 'pink',
+    color: 'rose',
     skills: ['Photoshop', 'After Effects', 'AI Content Creation', 'Bilibili'],
   },
 ]
 
 const colorMap: Record<string, string> = {
-  violet: 'border-violet-500/20 bg-violet-500/5 text-violet-300 hover:bg-violet-500/15 hover:border-violet-500/40',
-  blue: 'border-blue-500/20 bg-blue-500/5 text-blue-300 hover:bg-blue-500/15 hover:border-blue-500/40',
+  amber: 'border-amber-500/20 bg-amber-500/5 text-amber-300 hover:bg-amber-500/15 hover:border-amber-500/40',
+  cyan: 'border-cyan-500/20 bg-cyan-500/5 text-cyan-300 hover:bg-cyan-500/15 hover:border-cyan-500/40',
   emerald: 'border-emerald-500/20 bg-emerald-500/5 text-emerald-300 hover:bg-emerald-500/15 hover:border-emerald-500/40',
   orange: 'border-orange-500/20 bg-orange-500/5 text-orange-300 hover:bg-orange-500/15 hover:border-orange-500/40',
-  pink: 'border-pink-500/20 bg-pink-500/5 text-pink-300 hover:bg-pink-500/15 hover:border-pink-500/40',
+  rose: 'border-rose-500/20 bg-rose-500/5 text-rose-300 hover:bg-rose-500/15 hover:border-rose-500/40',
 }
 
 const headerColorMap: Record<string, string> = {
-  violet: 'text-violet-400',
-  blue: 'text-blue-400',
+  amber: 'text-amber-400',
+  cyan: 'text-cyan-400',
   emerald: 'text-emerald-400',
   orange: 'text-orange-400',
-  pink: 'text-pink-400',
+  rose: 'text-rose-400',
 }
 
 export default function Skills() {
@@ -64,8 +64,8 @@ export default function Skills() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="font-mono text-violet-400 text-sm mb-3">02. skills</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white">Tech Stack</h2>
+          <p className="hud-label text-amber-400 text-sm mb-3">Sector 02 · Ship Systems</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white">Systems Loadout</h2>
           <p className="text-zinc-400 mt-4 max-w-xl">
             From LLM inference engines to cloud infrastructure — here's what I work with.
           </p>
@@ -78,7 +78,7 @@ export default function Skills() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className={`p-6 rounded-2xl border border-zinc-800 bg-zinc-900/20 hover:border-zinc-700 transition-all`}
+              className={`hud-panel p-6 border border-zinc-800 bg-zinc-900/20 hover:border-zinc-700 transition-all`}
             >
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-2xl">{cat.icon}</span>

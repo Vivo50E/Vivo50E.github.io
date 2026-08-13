@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import Hero from './components/Hero'
 import About from './components/About'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import Nav from './components/Nav'
+import SpaceBackground from './components/three/SpaceBackground'
 import './App.css'
 
 function App() {
@@ -31,17 +31,18 @@ function App() {
   }, [])
 
   return (
-    <div className="bg-[#0a0a0f] text-white min-h-screen overflow-x-hidden">
+    <div className="noise vignette bg-[#04060b] text-white min-h-screen overflow-x-hidden">
+      <SpaceBackground />
       <Nav activeSection={activeSection} scrolled={scrolled} />
-      <main>
+      <main className="relative z-10">
         <Hero />
         <About />
         <Skills />
         <Projects />
         <Contact />
       </main>
-      <footer className="text-center py-8 text-zinc-600 text-sm border-t border-zinc-900">
-        <p>© 2025 Yiqi Xue · Built with React + Framer Motion</p>
+      <footer className="relative z-10 text-center py-8 text-zinc-600 text-sm border-t border-cyan-500/10 font-mono">
+        <p>// end of transmission — © 2025 Yiqi Xue</p>
       </footer>
     </div>
   )

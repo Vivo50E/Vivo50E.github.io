@@ -22,8 +22,8 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="mb-16"
         >
-          <p className="font-mono text-violet-400 text-sm mb-3">01. about</p>
-          <h2 className="text-4xl md:text-5xl font-black text-white">Who am I?</h2>
+          <p className="hud-label text-amber-400 text-sm mb-3">Sector 01 · Identity</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white">Crew Dossier</h2>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -37,8 +37,8 @@ export default function About() {
             <p>
               Hey! I'm <span className="text-white font-semibold">Yiqi Xue</span>, a Full-Stack AI
               Engineer / Machine Learning Systems Engineer based in the Bay Area. I studied Math at{' '}
-              <span className="text-violet-400">UCLA</span> before earning my degree in Computer
-              Science from <span className="text-violet-400">USC</span>.
+              <span className="text-cyan-400">UCLA</span> before earning my degree in Computer
+              Science from <span className="text-cyan-400">USC</span>.
             </p>
             <p>
               I'm obsessed with the intersection of AI and software engineering — particularly around
@@ -48,7 +48,7 @@ export default function About() {
                 href="https://github.com/vllm-project/vllm"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-violet-400 hover:text-violet-300 transition-colors"
+                className="text-amber-400 hover:text-amber-300 transition-colors"
               >
                 vLLM
               </a>{' '}
@@ -64,7 +64,7 @@ export default function About() {
               {['AI Enthusiast', 'Open Source', 'Freelancer', 'INTJ', 'Sci-fi nerd'].map(tag => (
                 <span
                   key={tag}
-                  className="px-3 py-1 rounded-full text-sm border border-zinc-700 text-zinc-400 bg-zinc-900/50"
+                  className="px-3 py-1 text-sm border border-cyan-500/20 text-zinc-400 bg-zinc-900/50 hud-label !tracking-normal !normal-case"
                 >
                   {tag}
                 </span>
@@ -77,7 +77,7 @@ export default function About() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-2 gap-5"
           >
             {stats.map((stat, i) => (
               <motion.div
@@ -85,9 +85,9 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                className="p-6 rounded-2xl border border-zinc-800 bg-zinc-900/30 hover:border-violet-500/30 hover:bg-violet-500/5 transition-all group"
+                className="hud-panel p-6 border border-zinc-800 bg-zinc-900/30 hover:border-cyan-500/30 hover:bg-cyan-500/5 transition-all group"
               >
-                <div className="text-3xl font-black text-white mb-1 group-hover:text-violet-400 transition-colors">
+                <div className="text-3xl font-black text-white mb-1 group-hover:text-cyan-300 transition-colors">
                   {stat.value}
                 </div>
                 <div className="text-sm font-semibold text-zinc-300 mb-1">{stat.label}</div>
@@ -100,7 +100,7 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="col-span-2 p-5 rounded-2xl border border-violet-500/20 bg-gradient-to-br from-violet-500/5 to-blue-500/5"
+              className="hud-panel col-span-2 p-5 border border-amber-500/20 bg-gradient-to-br from-amber-500/5 to-cyan-500/5"
             >
               <div className="flex items-center gap-3">
                 <div className="text-2xl">🧠</div>
