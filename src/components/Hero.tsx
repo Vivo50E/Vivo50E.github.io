@@ -119,7 +119,7 @@ export default function Hero() {
               2000,
               'Full Stack Developer',
               2000,
-              'USC Computer Science',
+              'USC CS Grad',
               2000,
               'Building the future with AI',
               2000,

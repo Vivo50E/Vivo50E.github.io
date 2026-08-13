@@ -5,7 +5,7 @@ import { useRef } from 'react'
 const stats = [
   { label: 'GitHub Stars', value: '75k+', note: 'across contributed repos' },
   { label: 'Focus Area', value: 'AI/ML', note: 'inference & serving' },
-  { label: 'Education', value: 'USC', note: 'Computer Science' },
+  { label: 'Education', value: 'USC · UCLA', note: 'CS & Math' },
   { label: 'Location', value: 'Bay Area', note: 'California' },
 ]
 
@@ -36,8 +36,9 @@ export default function About() {
           >
             <p>
               Hey! I'm <span className="text-white font-semibold">Yiqi Xue</span>, an AI engineer
-              and full-stack developer based in the Bay Area. I'm currently pursuing Computer Science
-              at <span className="text-violet-400">USC</span>.
+              and full-stack developer based in the Bay Area. I studied Math at{' '}
+              <span className="text-violet-400">UCLA</span> before earning my degree in Computer
+              Science from <span className="text-violet-400">USC</span>.
             </p>
             <p>
               I'm obsessed with the intersection of AI and software engineering — particularly around
