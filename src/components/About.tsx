@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 
 const stats = [
-  { label: 'GitHub Stars', value: '75k+', note: 'across contributed repos' },
+  { label: 'GitHub Stars', value: '96k+', note: 'across contributed repos' },
   { label: 'Focus Area', value: 'AI/ML', note: 'inference & serving' },
   { label: 'Education', value: 'USC · UCLA', note: 'CS & Math' },
   { label: 'Location', value: 'Bay Area', note: 'California' },

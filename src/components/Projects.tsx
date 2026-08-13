@@ -204,9 +204,9 @@ export default function Projects() {
           <p className="text-zinc-500 text-sm mb-3 font-mono">// Open source contributions</p>
           <div className="flex flex-wrap gap-3">
             {[
-              { name: 'vllm-project/vllm', stars: '71.6k', url: 'https://github.com/vllm-project/vllm' },
-              { name: 'vllm-project/vllm-omni', stars: '2.9k', url: 'https://github.com/vllm-project/vllm-omni' },
-              { name: 'benchflow-ai/skillsbench', stars: '562', url: 'https://github.com/benchflow-ai/skillsbench' },
+              { name: 'vllm-project/vllm', stars: '89k', url: 'https://github.com/vllm-project/vllm' },
+              { name: 'vllm-project/vllm-omni', stars: '6.1k', url: 'https://github.com/vllm-project/vllm-omni' },
+              { name: 'benchflow-ai/skillsbench', stars: '1.7k', url: 'https://github.com/benchflow-ai/skillsbench' },
             ].map(repo => (
               <a
                 key={repo.name}
