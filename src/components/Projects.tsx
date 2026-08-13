@@ -11,6 +11,7 @@ interface Project {
   github?: string
   demo?: string
   featured?: boolean
+  thumbnail?: string
 }
 
 const projects: Project[] = [
@@ -22,6 +23,7 @@ const projects: Project[] = [
     status: 'live',
     github: 'https://github.com/Vivo50E/AgentVerse',
     demo: 'https://vivo50e.github.io/AgentVerse/',
+    thumbnail: '/projects/agentverse.png',
     featured: true,
   },
   {
@@ -32,6 +34,7 @@ const projects: Project[] = [
     status: 'live',
     github: 'https://github.com/Vivo50E/NoteWise',
     demo: 'http://www.notewise.design/',
+    thumbnail: '/projects/notewise.png',
     featured: true,
   },
   {
@@ -85,19 +88,33 @@ function ProjectCard({ project, index, isInView }: { project: Project; index: nu
       }`}
     >
       {project.featured && (
-        <div className="absolute -top-2.5 left-5">
+        <div className="absolute -top-2.5 left-5 z-10">
           <span className="px-3 py-0.5 rounded-full text-xs font-semibold bg-violet-600 text-white">Featured</span>
         </div>
       )}
 
-      <div className="flex items-start justify-between mb-4">
-        <div className="text-3xl">
-          {['🚀', '💡', '⚡', '🔮', '🧠', '🎮'][index % 6]}
+      {project.thumbnail ? (
+        <div className="-mx-6 -mt-6 mb-4 relative aspect-video overflow-hidden rounded-t-2xl border-b border-zinc-800">
+          <img
+            src={project.thumbnail}
+            alt={`${project.title} screenshot`}
+            loading="lazy"
+            className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-300"
+          />
+          <span className={`absolute top-3 right-3 px-2.5 py-1 rounded-full text-xs font-medium border backdrop-blur-sm ${s.color}`}>
+            {s.label}
+          </span>
         </div>
-        <span className={`px-2.5 py-1 rounded-full text-xs font-medium border ${s.color}`}>
-          {s.label}
-        </span>
-      </div>
+      ) : (
+        <div className="flex items-start justify-between mb-4">
+          <div className="text-3xl">
+            {['🚀', '💡', '⚡', '🔮', '🧠', '🎮'][index % 6]}
+          </div>
+          <span className={`px-2.5 py-1 rounded-full text-xs font-medium border ${s.color}`}>
+            {s.label}
+          </span>
+        </div>
+      )}
 
       <h3 className="text-white font-bold text-xl mb-2 group-hover:text-violet-300 transition-colors">
         {project.title}
